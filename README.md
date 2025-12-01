@@ -1,5 +1,5 @@
 # Cryptography system
-This is a very simple cryptography system that basically uses the fact that big semiprimes (natural numbers with exactly two prime factors) are computationally hard to factor out.
+This is a cryptography system that basically uses the fact that big semiprimes (natural numbers with exactly two prime factors) are computationally hard to factor out.
 
 Here is basically how it works:
 1. Pick two prime numbers `p` and `q` that are very big and close in size and a third number *n* = p×q (which is their product). For example, it is _NOT_ a good idea to pick `p = 7` and `q = 199933` and `n = 7 * 199933 = 1399531` because 7 is a small factor and once the third party tries divisibility by 2,3,5,7 it will know the first factor and then trivially deduce the next by dividing n/7. We will assume that `n` is "publicly" visible information.
